@@ -1,0 +1,87 @@
+﻿<Page
+    x:Class="TestableUnoApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestableUnoApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Loaded="MainPage_Loaded"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="LoginLabel"
+                       Text="Login" 
+                       FontSize="36" 
+                       Margin="4" 
+                       TextAlignment="Center"/>
+            
+            <TextBlock x:Name="ErrorMessage" 
+                       Text="" 
+                       FontSize="20" 
+                       Margin="4" 
+                       Foreground="Red" 
+                       TextAlignment="Center"/>
+            
+            <TextBlock Text="Enter your username below" 
+                       Margin="0,0,0,20"
+                       TextWrapping="Wrap" Width="300"
+                       TextAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="16"/>
+            
+            <TextBox x:Name="UsernameTextBox" 
+                     Margin="4" 
+                     Width="250"/>
+
+            <Button x:Name="ValidateUserName" 
+                    Content="Validate user name" 
+                    Background="DodgerBlue" 
+                    Foreground="White"
+                    Click="ValidateUserName_Click" 
+                    HorizontalAlignment="Center" 
+                    Margin="0,20"/>
+
+            <StackPanel x:Name="PasswordContainer"
+                        HorizontalAlignment="Center">
+                <TextBlock Text="Enter your password" 
+                       Margin="0,0,0,20"
+                       TextWrapping="Wrap" Width="300"
+                       TextAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="16"/>
+
+                <PasswordBox x:Name="PasswordTextBox" 
+                             Margin="4" 
+                             Width="250"/>
+
+                <Button x:Name="LoginButton" 
+                        Content="Login" 
+                        Background="DodgerBlue" 
+                        Foreground="White"
+                        Click="LoginButton_Click" 
+                        HorizontalAlignment="Center" 
+                        Margin="0,20"/>
+
+                <CheckBox x:Name="RememberMeCheckBox" 
+                          HorizontalAlignment="Center"
+                          Content="Remember Me" />
+            </StackPanel>
+
+            <TextBlock x:Name="DontHaveAnAccount"
+                       Text="Don't have an account?"
+                       TextAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="16"/>
+
+            <TextBlock x:Name="RegisterButtonTextBlock" 
+                       AutomationProperties.AutomationId="RegisterButtonTextBlock"
+                       Text="Register now"
+                       PointerPressed="RegisterButtonTextBlock_OnPointerPressed"
+                       Foreground="DodgerBlue"
+                       TextAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="16"/>
+        </StackPanel>
+    </Grid>
+</Page>
