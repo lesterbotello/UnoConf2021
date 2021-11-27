@@ -22,6 +22,7 @@ namespace TestableUnoApp.UITests
 
             //App.WaitForElement(userNameField);
             //App.Tap(userNameField);
+            //App.ClearText();
             //App.EnterText("qwerty");
             //App.Flash(validateButton);
             //App.Tap(validateButton);
@@ -35,7 +36,7 @@ namespace TestableUnoApp.UITests
 
             // ... or you can use the shorter, base-class powered version :)
 
-            EnterTextWhenReady("qwerty", "UsernameTextBox");
+            EnterTextWhenReady("qwerty", "UsernameTextBox", true);
             TapElementWhenReady("ValidateUserName", true);
             AssertAreEqual("ErrorMessage", "Text", "Please enter a valid email address");
         }
@@ -52,6 +53,7 @@ namespace TestableUnoApp.UITests
 
             //App.WaitForElement(userNameField);
             //App.Tap(userNameField);
+            //App.ClearText();
             //App.EnterText("lesterbotello@gmail.com");
             //App.Flash(validateButton);
             //App.Tap(validateButton);
@@ -65,7 +67,7 @@ namespace TestableUnoApp.UITests
 
             // ... or you can use the shorter, base-class powered version :)
 
-            EnterTextWhenReady("lesterbotello@gmail.com", "UsernameTextBox");
+            EnterTextWhenReady("lesterbotello@gmail.com", "UsernameTextBox", true);
             TapElementWhenReady("ValidateUserName", true);
             AssertAreEqual("ErrorMessage", "Text", string.Empty);
         }
@@ -78,6 +80,7 @@ namespace TestableUnoApp.UITests
             //var query = Query("UsernameTextBox");
             //App.Tap(query);
             //App.Tap(query); // Tap again to dismiss autofill, which would show up if enabled...
+            //App.ClearText();
             //App.EnterText("qwerty");
             //App.Tap(Query("ValidateUserName"));
             //var result = App.Query(Query("PasswordContainer"));
@@ -85,7 +88,7 @@ namespace TestableUnoApp.UITests
 
             // ... or you can use the shorter, base-class powered version :)
 
-            EnterTextWhenReady("qwerty", "UsernameTextBox");
+            EnterTextWhenReady("qwerty", "UsernameTextBox", true);
             TapElementWhenReady("ValidateUserName", true);
             var result = App.Query(Query("PasswordContainer"));
             Assert.IsTrue(result.Length == 0);
@@ -99,6 +102,7 @@ namespace TestableUnoApp.UITests
             //var query = Query("UsernameTextBox");
             //App.Tap(query);
             //App.Tap(query); // Tap again to dismiss autofill, which would show up if enabled...
+            //App.ClearText();
             //App.EnterText("qwerty");
             //App.Tap(Query("ValidateUserName"));
             //var result = App.Query(Query("PasswordContainer"));
@@ -106,7 +110,7 @@ namespace TestableUnoApp.UITests
 
             // ... or you can use the shorter, base-class powered version :)
 
-            EnterTextWhenReady("lesterbotello@gmail.com", "UsernameTextBox");
+            EnterTextWhenReady("lesterbotello@gmail.com", "UsernameTextBox", true);
             TapElementWhenReady("ValidateUserName", true);
             var result = App.Query(Query("PasswordContainer"));
             Assert.IsTrue(result.Length > 0);

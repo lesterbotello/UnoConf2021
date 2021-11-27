@@ -52,11 +52,16 @@ namespace TestableUnoApp.UITests
             App.Tap(query);
         }
 
-        protected void EnterTextWhenReady(string text, string elementId = null)
+        protected void EnterTextWhenReady(string text, string elementId = null, bool clearText = false)
         {
             if(!string.IsNullOrEmpty(elementId))
             {
                 TapElementWhenReady(elementId);
+            }
+
+            if(clearText)
+            {
+                App.ClearText();
             }
 
             App.EnterText(text);

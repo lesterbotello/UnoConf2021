@@ -15,6 +15,6 @@ namespace TestableUnoApp.UITests
         public readonly static string AndroidAppName = "com.companyname.TestableUnoApp";
         public readonly static string iOSDeviceNameOrId = "iPhone 13 iOS 15.0";
 
-        public readonly static Platform CurrentPlatform = Platform.iOS;
+        public readonly static Platform CurrentPlatform = Platform.Android;
     }
 }
