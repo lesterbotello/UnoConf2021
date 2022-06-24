@@ -5,10 +5,12 @@
     xmlns:local="using:TestableUnoApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ios="http:///uno/ui/ios"
     Loaded="MainPage_Loaded"
-    mc:Ignorable="d">
+    mc:Ignorable="d ios">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          ios:Margin="0,60,0,0">
         <StackPanel Orientation="Vertical">
             <TextBlock x:Name="LoginLabel"
                        Text="Login" 
@@ -32,6 +34,7 @@
             
             <TextBox x:Name="UsernameTextBox" 
                      Margin="4" 
+                     InputScope="EmailSmtpAddress"
                      Width="250"/>
 
             <Button x:Name="ValidateUserName" 
